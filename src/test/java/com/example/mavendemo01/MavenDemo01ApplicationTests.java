@@ -8,6 +8,8 @@ import com.example.mavendemo01.mybatiscatalog.Comment;
 import com.example.mavendemo01.mybatiscatalog.CommentMapper;
 import com.example.mavendemo01.mybatiscatalog.jpa.Discuss;
 import com.example.mavendemo01.mybatiscatalog.jpa.DiscussRepository;
+import com.example.mavendemo01.mybatiscatalog.redis.Address;
+import com.example.mavendemo01.mybatiscatalog.redis.Family;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -131,5 +134,20 @@ class MavenDemo01ApplicationTests {
         Example<Discuss> example1= Example.of(discuss,matcher);
         List<Discuss> list2 =repository.findAll(example1);
         System.out.println(list2);
+
+
+        /*Person person1=new Person("张","三");
+        Person person2=new Person("tom","kitty");
+        Address address=new Address("北京","china");
+        person1.setAddress(address);
+        List<Family> list4 =new ArrayList<>();
+        Family dad=new Family("父亲","文海");
+        Family mom=new Family("母亲","丹萍");
+        list4.add(dad);
+        list4.add(mom);
+        person1.setFamilyList(list4);
+        person1 save =repository.save(person1);*/
+
+
     }
 }
