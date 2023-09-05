@@ -1,5 +1,6 @@
-package com.example.mavendemo01;
+package com.example.mavendemo01.ShujuFanhui;
 
+import com.example.mavendemo01.ShujuFanhui.Course;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -7,19 +8,19 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-@Component//°ÑStudentÊµÌåÀà
+@Component
 @ConfigurationProperties(prefix = "student")
 public class Student {
 
     private int id;
     private String name;
     private int age;
-    private String[] hobby;//°®ºÃ
-    private List electProduct;//µç×Ó²úÆ·
-    private Map friends;//ÅóÓÑ
-    private Course course;//¿Î³Ì
+    private String[] hobby;//ï¿½ï¿½ï¿½ï¿½
+    private List electProduct;//ï¿½ï¿½ï¿½Ó²ï¿½Æ·
+    private Map friends;//ï¿½ï¿½ï¿½ï¿½
+    private Course course;//ï¿½Î³ï¿½
 
-    // alt + inser Í¬Ê±°´ÏÂ¿ì½Ý¼ü
+    // alt + inser Í¬Ê±ï¿½ï¿½ï¿½Â¿ï¿½Ý¼ï¿½
 
     public int getId() {
         return id;

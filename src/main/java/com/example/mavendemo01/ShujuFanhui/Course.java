@@ -1,8 +1,8 @@
-package com.example.mavendemo01;
+package com.example.mavendemo01.ShujuFanhui;
 
 public class Course {
-    private int courseId;//¿Î³Ì±àºÅ
-    private String courseName;//¿Î³ÌÃû×Ö
+    private int courseId;
+    private String courseName;
 
     public int getCourseId() {
         return courseId;
