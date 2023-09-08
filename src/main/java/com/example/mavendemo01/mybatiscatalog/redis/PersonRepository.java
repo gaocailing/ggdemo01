@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface PersonRepository extends CrudRepository<Person,String > {
-    List<Person> findByLastname(String lastname);
+    List<com.example.mavendemo01.ShujuFanhui.Person> findByLastname(String lastname);
     Page<Person> findPersonByLastname(String lastname, Pageable page);
     List<Person> findByFirstnameAndLastname(String firstname,String lastname);
     List<Person> findByAddress_City(String city);

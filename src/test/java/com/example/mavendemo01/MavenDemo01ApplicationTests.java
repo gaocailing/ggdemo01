@@ -10,6 +10,7 @@ import com.example.mavendemo01.mybatiscatalog.jpa.Discuss;
 import com.example.mavendemo01.mybatiscatalog.jpa.DiscussRepository;
 import com.example.mavendemo01.mybatiscatalog.redis.Address;
 import com.example.mavendemo01.mybatiscatalog.redis.Family;
+import com.example.mavendemo01.mybatiscatalog.redis.PersonRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +57,8 @@ class MavenDemo01ApplicationTests {
 
     @Autowired
     private DiscussRepository repository;
+    @Autowired
+    private PersonRepository repository1;
 
     @Test
 
@@ -135,8 +138,9 @@ class MavenDemo01ApplicationTests {
         List<Discuss> list2 =repository.findAll(example1);
         System.out.println(list2);
 
+/*public void savePerson {
 
-        /*Person person1=new Person("张","三");
+        Person person1=new Person("张","杰");
         Person person2=new Person("tom","kitty");
         Address address=new Address("北京","china");
         person1.setAddress(address);
@@ -146,8 +150,54 @@ class MavenDemo01ApplicationTests {
         list4.add(dad);
         list4.add(mom);
         person1.setFamilyList(list4);
-        person1 save =repository.save(person1);*/
+        person1 save =repository.save(person2);
+
+            System.out.println(save);
+            System.out.println(save2);
+        }
+
+        public void selectPerson(){
+    List<Person>list =repository.findByAddress_City("四川");
+            System.out.println(list);
+        }
+
+        public void updatePerson(){
+    Person person1=repository.findByFirstnameAndLastname("张","杰");
+    person1.setLastname("娜");
+    Person.update=repository.save(person1);
+            System.out.println(update);
+
+        }
+
+        public void deletePerson(){
+    Person person =repository.findByFirstnameAndLastname("谢","娜");
+    repository.delete(person);
+        }*/
 
 
+
+    }
+    @Test
+    public void saveRedisPerson() {
+        com.example.mavendemo01.mybatiscatalog.redis.Person personRedis = new com.example.mavendemo01.mybatiscatalog.redis.Person();
+        personRedis.setFirstname("蔡");
+        personRedis.setLastname("徐坤");
+        Address address = new Address();
+        address.setCity("蔡徐村");
+        address.setType("美国");
+        personRedis.setAddress(address);
+        List<Family> List = new ArrayList<>();
+        Family dad = new Family("父亲", "丁");
+        Family mom = new Family("母亲", "真");
+        List.add(dad);
+        List.add(mom);
+        personRedis.setFamilyList(List);
+        com.example.mavendemo01.mybatiscatalog.redis.Person personResult = repository1.save(personRedis);
+        System.out.println(personResult);
+    }
+    @Test
+    public void contextLoads1() {
+        List<Person> listPerson = repository1.findByLastname("徐坤");
+        System.out.println(listPerson);
     }
 }
