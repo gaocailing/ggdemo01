@@ -61,9 +61,6 @@ class MavenDemo01ApplicationTests {
     private PersonRepository repository1;
 
     @Test
-
-
-
     void contextLoads() throws RuntimeException {
         String result = con.hello();
         System.out.println("单元测试返回"+con.hello());
@@ -92,25 +89,17 @@ class MavenDemo01ApplicationTests {
     comment1.setaId(5);
     commentMapper.insertComment(comment1);
 
-
-
-
         //更新
   /* Comment comment=new Comment();
     comment.setContent("篮球与鸡");
     comment.setId(5);
     commentMapper.updateComment(comment);
 
-   */
-
-
-
 
         //删除
         /*commentMapper.deleteComment(5);
 
          */
-
 
         List <Discuss> list=repository.findByAuthorNotNull();
         System.out.println(list);
@@ -173,8 +162,6 @@ class MavenDemo01ApplicationTests {
     Person person =repository.findByFirstnameAndLastname("谢","娜");
     repository.delete(person);
         }*/
-
-
 
     }
     @Test
