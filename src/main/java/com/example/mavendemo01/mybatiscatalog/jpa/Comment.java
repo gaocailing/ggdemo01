@@ -1,4 +1,4 @@
-package com.example.mavendemo01.mybatiscatalog;
+package com.example.mavendemo01.mybatiscatalog.jpa;
 
 public class Comment {
     private Integer id;  //评论id

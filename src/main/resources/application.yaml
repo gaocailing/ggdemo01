@@ -1,7 +1,7 @@
 server:
  # port: 8090
   servlet:
-    context-path: /chapter
+    context-path:
 
 student:
   id: 900

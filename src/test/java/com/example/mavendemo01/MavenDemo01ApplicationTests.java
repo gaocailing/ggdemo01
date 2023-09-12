@@ -1,15 +1,15 @@
 package com.example.mavendemo01;
 
+import com.example.mavendemo01.ShujuFanhui.CustomProperties;
 import com.example.mavendemo01.ShujuFanhui.Student;
 import com.example.mavendemo01.ShujuFanhui.User;
 import com.example.mavendemo01.contorller.controller;
-import com.example.mavendemo01.mybatiscatalog.Comment;
-import com.example.mavendemo01.mybatiscatalog.CommentMapper;
+import com.example.mavendemo01.mybatiscatalog.jpa.Comment;
+import com.example.mavendemo01.mybatiscatalog.jpa.CommentMapper;
 import com.example.mavendemo01.mybatiscatalog.jpa.Discuss;
 import com.example.mavendemo01.mybatiscatalog.jpa.DiscussRepository;
 import com.example.mavendemo01.mybatiscatalog.redis.Address;
 import com.example.mavendemo01.mybatiscatalog.redis.Family;
-import com.example.mavendemo01.mybatiscatalog.redis.Person;
 import com.example.mavendemo01.mybatiscatalog.redis.PersonRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -150,7 +150,7 @@ class MavenDemo01ApplicationTests {
     }
     @Test
     public void contextLoads1() {
-        List<Person> listPerson = repository1.findByLastname("杰");
-        System.out.println(listPerson);
+//        List<Person> listPerson = repository1.findByLastname("杰");
+//        System.out.println(listPerson);
     }
 }

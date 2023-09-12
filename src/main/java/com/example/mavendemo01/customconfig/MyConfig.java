@@ -1,4 +1,4 @@
-package com.example.mavendemo01;
+package com.example.mavendemo01.customconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.example.mavendemo01;
+package com.example.mavendemo01.customconfig;
 
 public class MyProperties {
     public void getResult(){

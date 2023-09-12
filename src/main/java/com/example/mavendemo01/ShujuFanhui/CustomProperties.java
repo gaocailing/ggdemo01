@@ -1,7 +1,6 @@
-package com.example.mavendemo01;
+package com.example.mavendemo01.ShujuFanhui;
 
 
-import com.example.mavendemo01.ShujuFanhui.Course;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

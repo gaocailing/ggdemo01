@@ -1,5 +1,6 @@
-package com.example.mavendemo01.mybatiscatalog;
+package com.example.mavendemo01.mybatiscatalog.jpa;
 
+import com.example.mavendemo01.mybatiscatalog.jpa.Comment;
 import org.apache.ibatis.annotations.*;
 
 @Mapper

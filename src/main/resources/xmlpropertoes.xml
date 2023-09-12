@@ -3,6 +3,6 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="xmlpropertoes" class="com.example.mavendemo01.MyProperties"></bean>
+    <bean id="xmlpropertoes" class="com.example.mavendemo01.customconfig.MyProperties"></bean>
 
 </beans>
